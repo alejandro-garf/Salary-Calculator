@@ -4,7 +4,7 @@
 // gfon@csu.fullerton.edu
 // alejandro-garf
 //
-// Lab 3-2
+// Lab 2-1
 
 #include <iomanip>
 #include <iostream>
@@ -21,10 +21,14 @@ int main() {
   std::cout << "Hours Worked: ";
   std::cin >> hours_worked;
 
+  double invalid = 0;
   double total_salary = CalculateTotalSalary(hourly_wage, hours_worked);
+  if (total_salary == invalid) {
+    return 0;
+  } else {
+    std::cout << "Total Salary Owed: $" << std::fixed << std::setprecision(2)
+              << total_salary << std::endl;
 
-  std::cout << "Total Salary Owed: $" << std::fixed << std::setprecision(2)
-            << total_salary << std::endl;
-
-  return 0;
+    return 0;
+  }
 }
