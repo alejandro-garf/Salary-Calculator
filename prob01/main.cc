@@ -8,12 +8,13 @@
 
 #include <iostream>
 #include <string>
-
-#include "time_converter.cc"
 #include "time_converter.h"
+#include "time_converter.cc"
 
 int main() {
+
   int military_time = 0;
+
   std::cout << "Please enter the time in military time: ";
   std::cin >> military_time;
 

@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <string>
+#include "time_converter.h"
 
 std::string MilitaryToRegularTime(int military_time) {
   int hours = military_time / 100;
@@ -27,7 +28,7 @@ std::string MilitaryToRegularTime(int military_time) {
   }
 
   std::string hours_str =
-      (hours < 10) ? "0" + std::to_string(hours) : std::to_string(hours);
+      (hours < 10) ? std::to_string(hours) : std::to_string(hours);
   std::string minutes_str =
       (minutes < 10) ? "0" + std::to_string(minutes) : std::to_string(minutes);
 
