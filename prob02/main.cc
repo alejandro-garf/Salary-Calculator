@@ -9,11 +9,11 @@
 #include <iomanip>
 #include <iostream>
 
-#include "salary.cc"
 #include "salary.h"
 
 int main() {
-  double hourly_wage, hours_worked;
+  double hourly_wage = 0;
+  double hours_worked = 0;
 
   std::cout << "Hourly Wage: $";
   std::cin >> hourly_wage;
@@ -23,12 +23,13 @@ int main() {
 
   double invalid = 0;
   double total_salary = CalculateTotalSalary(hourly_wage, hours_worked);
-  if (total_salary == invalid) {
-    return 0;
-  } else {
-    std::cout << "Total Salary Owed: $" << std::fixed << std::setprecision(2)
-              << total_salary << std::endl;
 
-    return 0;
+  if (total_salary == invalid) {
+    return 0.0;
   }
+
+  std::cout << "Total Salary Owed: $" << std::fixed << std::setprecision(2)
+            << total_salary << std::endl;
+
+  return 0;
 }

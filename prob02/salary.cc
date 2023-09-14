@@ -17,7 +17,7 @@ double CalculateTotalSalary(double hourly_wage, double hours_worked) {
     return 0.0;
   }
 
-  double total_salary;
+  double total_salary = 0;
 
   if (hours_worked <= 40) {
     total_salary = hourly_wage * hours_worked;
