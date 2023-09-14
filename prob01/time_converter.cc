@@ -23,7 +23,7 @@ std::string MilitaryToRegularTime(int military_time) {
     period = "am";
   }
 
-  std::string hours_str = std::to_string(hours%12);
+  std::string hours_str = std::to_string(hours % 12);
   if (minutes < 10) {
     minutes_str = "0";
   }
