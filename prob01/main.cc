@@ -9,7 +9,6 @@
 #include <iostream>
 #include <string>
 #include "time_converter.h"
-#include "time_converter.cc"
 
 int main() {
 
@@ -20,6 +19,6 @@ int main() {
 
   std::string regular_time = MilitaryToRegularTime(military_time);
 
-  std::cout << "The equivalent regular time is: " << regular_time << "\n";
+  std::cout << "The equivalent regular time is: " << regular_time <<"/n";
   return 0;
 }
