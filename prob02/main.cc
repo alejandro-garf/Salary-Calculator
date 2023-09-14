@@ -8,16 +8,17 @@
 
 #include <iomanip>
 #include <iostream>
-#include "salary.h"
+
 #include "salary.cc"
+#include "salary.h"
 
 int main() {
   double hourly_wage, hours_worked;
 
-  std::cout << "Hourly wage: $";
+  std::cout << "Hourly Wage: $";
   std::cin >> hourly_wage;
 
-  std::cout << "Hours worked: ";
+  std::cout << "Hours Worked: ";
   std::cin >> hours_worked;
 
   double total_salary = CalculateTotalSalary(hourly_wage, hours_worked);
