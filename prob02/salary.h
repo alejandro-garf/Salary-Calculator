@@ -1,12 +1,9 @@
-// TODO: please fill in below.
-// <Your name>
-// <Your section number> (e.g. CPSC 121L-01)
-// <Date>
-// <Your csu.fullerton.edu email>
-// <Your GitHub username>
+// Alejandro Fonseca
+// CPSC 121L-06
+// 9/13/2023
+// gfon@csu.fullerton.edu
+// alejandro-garf
 //
 // Lab 3-2
-// If it is a pair programming lab please specify partner below.
-// Partner: @peteranteater
 
-// TODO: write your function declaration here.
+double CalculateTotalSalary(double hourly_wage, double hours_worked);

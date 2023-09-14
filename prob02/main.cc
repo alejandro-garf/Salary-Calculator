@@ -1,21 +1,29 @@
-// TODO: please fill in below.
-// <Your name>
-// <Your section number> (e.g. CPSC 121L-01)
-// <Date>
-// <Your csu.fullerton.edu email>
-// <Your GitHub username>
+// Alejandro Fonseca
+// CPSC 121L-06
+// 9/13/2023
+// gfon@csu.fullerton.edu
+// alejandro-garf
 //
 // Lab 3-2
-// If it is a pair programming lab please specify partner below.
-// Partner: @peteranteater
 
 #include <iomanip>
 #include <iostream>
+#include "salary.h"
+#include "salary.cc"
 
 int main() {
-  // TODO: accept user input to store the hourly wage and hours worked.
-  // Then, include the header file at the top of this file so you can
-  // call your function that computes a salary based on these inputs.
-  // Don't forget to check for invalid inputs!
+  double hourly_wage, hours_worked;
+
+  std::cout << "Hourly wage: $";
+  std::cin >> hourly_wage;
+
+  std::cout << "Hours worked: ";
+  std::cin >> hours_worked;
+
+  double total_salary = CalculateTotalSalary(hourly_wage, hours_worked);
+
+  std::cout << "Total Salary Owed: $" << std::fixed << std::setprecision(2)
+            << total_salary << std::endl;
+
   return 0;
 }
