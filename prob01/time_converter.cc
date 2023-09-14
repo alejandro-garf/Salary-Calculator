@@ -14,25 +14,19 @@
 std::string MilitaryToRegularTime(int military_time) {
   int hours = military_time / 100;
   int minutes = military_time % 100;
+  std::string minutes_str;
   std::string period;
 
-  if (hours >= 12) {
-    period = "PM";
-    if (hours > 12) {
-      hours -= 12;
-    }
+  if (hours > 12) {
+    period = "pm";
   } else {
-    period = "AM";
-    if (hours == 0) {
-      hours = 12;
-    }
+    period = "am";
   }
 
-  std::string hours_str = std::to_string(hours);
-  std::string minutes_str =
-      (minutes < 10) ? "0" + std::to_string(minutes) : std::to_string(minutes);
-
-  std::string regular_time = hours_str + ":" + minutes_str + " " + period;
-
-  return regular_time;
+  std::string hours_str = std::to_string(hours%12);
+  if (minutes < 10) {
+    minutes_str = "0";
+  }
+  minutes_str += std::to_string(minutes);
+  return hours_str + ":" + minutes_str + " " + period;
 }
